@@ -231,10 +231,11 @@ class EditListingWizard extends Component {
     if (stripeConnected && !requirementsMissing) {
       onPublishListingDraft(id);
     } else {
-      this.setState({
-        draftId: id,
-        showPayoutDetails: true,
-      });
+      onPublishListingDraft(id);//TODO: Remove this hack after debug
+      // this.setState({
+      //   draftId: id,
+      //   showPayoutDetails: true,
+      // });
     }
   }
 
